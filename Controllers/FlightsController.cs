@@ -4,6 +4,7 @@ using TCSA.WebAPIs.FlightData.Models;
 
 namespace TCSA.WebAPIs.FlightData.Controllers;
 
+[ApiController]
 [Route("api/[controller]")]
 // example: http://localhost:5609/api/flight
 
