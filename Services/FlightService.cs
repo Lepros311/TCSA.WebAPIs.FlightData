@@ -31,7 +31,6 @@ public class FlightService : IFlightService
     public string? DeleteFlight(int id)
     {
         Flight savedFlight = Context.Flights.Find(id);
-        Context.SaveChanges();
 
         if (savedFlight == null)
         {
@@ -39,6 +38,7 @@ public class FlightService : IFlightService
         }
 
         Context.Flights.Remove(savedFlight);
+        Context.SaveChanges();
 
         return $"Successfully deleted flight with id: {id}";
     }

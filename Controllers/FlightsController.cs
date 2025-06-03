@@ -39,7 +39,7 @@ public class FlightController(IFlightService flightService) : ControllerBase
     [HttpPut]
     public ActionResult<Flight> UpdateFlight(Flight flight)
     {
-        var result = _flightService.GetFlightById(flight.Id);
+        var result = _flightService.UpdateFlight(flight);
 
         if (result == null)
         {
