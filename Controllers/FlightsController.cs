@@ -50,9 +50,9 @@ public class FlightController(IFlightService flightService) : ControllerBase
     }
 
     [HttpDelete("{id}")]
-    public ActionResult<string> DeleteFlight(int id)
+    public ActionResult<Flight> DeleteFlight(int id)
     {
-        var result = _flightService.GetFlightById(id);
+        var result = _flightService.DeleteFlight(id);
 
         if (result == null)
         {
